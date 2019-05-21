@@ -9,8 +9,9 @@ interface NoteDao {
     @Insert
     fun insert(note: Note);
 
-    @Update
-    fun update(note: Note)
+    @Query("UPDATE notes SET title = :title, description= :description WHERE id =:id")
+    fun update(title: String, description: String, id: Int)
+
 
     @Delete
     fun delete(note: Note)

@@ -42,6 +42,13 @@ class NoteAdapter(val noteList:ArrayList<Note>,val buttonCallBackInterface: Butt
         return noteList[position]
     }
 
+    fun remove(note:Note){
+        val position = noteList.indexOf(note)
+        if(position>-1){
+            noteList.removeAt(position)
+            notifyItemRemoved(position)
+        }
+    }
 
 
     interface ButtonCallBackInterface{

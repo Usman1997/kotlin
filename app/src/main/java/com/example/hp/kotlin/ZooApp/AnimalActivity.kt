@@ -14,20 +14,20 @@ import kotlinx.android.synthetic.main.activity_animal.*
 import kotlinx.android.synthetic.main.animal_killer_ticket.view.*
 import java.util.ArrayList
 
-class AnimalActivity:AppCompatActivity() {
+class AnimalActivity : AppCompatActivity() {
 
-  var animalList = ArrayList<Animal>()
-    var adapter:AnimalAdapter?=null
+    var animalList = ArrayList<Animal>()
+    var adapter: AnimalAdapter? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animal)
 
-        animalList.add(Animal("cat","This is cat",R.mipmap.ic_launcher,false))
-        animalList.add(Animal("dog","This is dog",R.mipmap.ic_launcher,false))
-        animalList.add(Animal("tiger","This is tiger",R.mipmap.ic_launcher,true))
-        animalList.add(Animal("lion","This is lion",R.mipmap.ic_launcher,true))
+        animalList.add(Animal("cat", "This is cat", R.mipmap.ic_launcher, false))
+        animalList.add(Animal("dog", "This is dog", R.mipmap.ic_launcher, false))
+        animalList.add(Animal("tiger", "This is tiger", R.mipmap.ic_launcher, true))
+        animalList.add(Animal("lion", "This is lion", R.mipmap.ic_launcher, true))
         adapter = AnimalAdapter(animalList)
         tvListAnimal.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
         tvListAnimal.adapter = adapter

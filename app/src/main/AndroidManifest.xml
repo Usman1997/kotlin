@@ -22,6 +22,14 @@
         </activity>
 
         <activity android:name=".ZooApp.AnimalActivity">
+
+        </activity>
+
+        <activity android:name=".NoteApp.AddNoteActivity">
+
+        </activity>
+
+        <activity android:name=".NoteApp.NoteListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
